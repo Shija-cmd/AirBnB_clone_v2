@@ -27,19 +27,19 @@ def cisfun(text):
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def pythoniscool(text='is cool'):
+def python_is_cool(text='is cool'):
     """Display “Python ”, followed by the value of the text variable"""
     return 'Python ' + text.replace('_', ' ')
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
-def imanumber(n):
+def n_is_number(n):
     """Display “n is a number” only if n is an integer"""
     return "{:d} is a number".format(n)
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
-def numbersandtemplates(n):
+def numbers_and_templates(n):
     """Display a HTML page only if n is an integer"""
     return render_template('5-number.html', n=n)
 
